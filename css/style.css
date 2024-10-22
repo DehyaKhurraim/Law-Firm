@@ -8551,11 +8551,14 @@ h1, h2, h3, h4, h5,
     bottom: -25px; }
 
 .practice-area {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 40px;
   padding: 20px;
+  height: 100%;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  position: relative; }
+  position: relative; 
+  box-sizing: border-box;}
   @media (max-width: 767.98px) {
     .practice-area {
       border-left: none;
