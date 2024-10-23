@@ -8620,48 +8620,55 @@ h1, h2, h3, h4, h5,
 .case {
   height: 300px;
   margin-bottom: 30px;
-  z-index: 0;
   position: relative;
-  -webkit-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
-  -moz-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
-  box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14); }
-  .case:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    background: #afa939;
-    opacity: 0;
-    z-index: -1;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  .case .text {
-    z-index: 1;
-    width: 100;
-    opacity: 0;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-    .case .text h3 a {
-      color: #fff;
-      font-size: 22px; }
-    .case .text span {
-      color: rgba(255, 255, 255, 0.9); }
-  .case:hover:after {
-    opacity: .5;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px; }
-  .case:hover .text {
-    opacity: 1; }
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.case:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.case:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background: linear-gradient(135deg, #afa939, var(--secondary));
+  opacity: 0.9;
+}
+
+.case .text {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+}
+
+.case .text h3 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.case .text span {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  display: block;
+}
+
+/* Optional: Add a subtle text shadow for better readability */
+.case .text h3,
+.case .text span {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 
 .ftco-consultation {
   background-position: top center !important;
